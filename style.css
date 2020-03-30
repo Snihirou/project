@@ -17,7 +17,7 @@
 }
 
 header .top_header {
-    height: 48px;
+    /* height: 48px; */
     background-color: #0175b3;
 }
 
@@ -25,7 +25,7 @@ header .flex_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 48px;
+    /* height: 48px; */
 }
 
 header .flex_header a {
@@ -45,7 +45,7 @@ header .flex_header a:hover {
 }
 
 header .bottom_header {
-    height: 138px;
+    /* height: 138px; */
     display: flex;
     align-items: center;
 }
@@ -86,7 +86,7 @@ header .bottom_header i {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url("../image/asia.png");
+    background-image: url("./image/asia.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -187,7 +187,7 @@ header .bottom_header i {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("../image/hands.png");
+    background-image: url("./image/hands.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -402,7 +402,7 @@ header .bottom_header i {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    background-image: url("../image/team.png");
+    background-image: url("./image/team.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -583,6 +583,10 @@ header .bottom_header i {
     font-size: 18px;
 }
 
+.container9 .right textarea {
+    resize: none;
+}
+
 .container9 .right a {
     display: flex;
     flex-direction: column;
@@ -597,7 +601,7 @@ header .bottom_header i {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 23px;
-    margin-top: 60px;
+    margin: 60px 0 48px 0;
 }
 
 .container9 .right a:hover {
@@ -806,6 +810,7 @@ footer p.end {
     color: #d1d1d1;
     text-align: center;
     padding: 138px 0 34px 0;
+    margin: 0;
 }
 
 @media (max-width: 1400px) {
@@ -882,6 +887,12 @@ footer p.end {
         padding: 0 10px;
     }
 
+    header .burger_shadow {
+        display: inline-flex;
+    }
+
+
+
     #menu {
         display: none;
     }
@@ -941,10 +952,15 @@ footer p.end {
 
 @media (max-width: 640px) {
 
+    header .burger_shadow {
+        display: flex;
+        flex-direction: column;
+    }
+
     header .flex_header {
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     header .flex_header form {
@@ -955,13 +971,11 @@ footer p.end {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-bottom: 82px;
-        margin-bottom: 70px;
     }
 
     #burger {
         width: 100%;
-        margin-bottom: 8px;
+        margin: 10px 0;
         position: relative;
     }
 
@@ -991,6 +1005,15 @@ footer p.end {
 
     .container7 {
         padding-top: 20px;
+    }
+
+    .container7 .team h3 {
+        padding-bottom: 15px;
+        font-size: 36px;
+    }
+
+    .container7 .team a {
+        margin-top: 10px;
     }
 
     .container9 .form {
@@ -1036,5 +1059,69 @@ footer p.end {
         justify-content: space-between;
         margin: 0;
         padding: 10% 0 0 8%;
+    }
+}
+
+@media (max-width: 420px) {
+
+    header .top_header {
+        /* height: 48px; */
+        background-color: #0175b3;
+    }
+
+    header .flex_header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .flex_header .link {
+        text-align: center;
+    }
+
+    header .flex_header img {
+        margin: 10px 0;
+    }
+
+    header .burger_shadow {
+        text-align: center;
+    }
+
+    header .burger_shadow input {
+        margin: 10px 0;
+    }
+
+    .bottom_header {
+        justify-content: center;
+    }
+
+    .container5 .center {
+        width: 94%;
+    }
+
+    .container5 .cards .item {
+        margin-bottom: 15px;
+        width: 300px;
+    }
+
+    .container5 .cards .item img {
+        width: 100%;
+    }
+
+    .container7 .team h3 {
+        font-size: 24px;
+        padding-top: 35px;
+    }
+
+    .container7 .team p {
+        font-size: 12px;
+    }
+
+    .container7 .team img {
+        padding-top: 25px;
+    }
+
+    .container7 .team a {
+        margin-top: 25px;
     }
 }
